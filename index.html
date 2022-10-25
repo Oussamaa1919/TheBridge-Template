@@ -19,9 +19,7 @@
       <img src="/images/search.png">
       <input type="text" placeholder="Search">
     </div>
-<div>
-  the bridge
-</div>
+
     <div class="navbar-center">
       <ul>
         <li><a href="#" class="active-link"> <img src="images/home.png"><span>home</span> </a></li>
@@ -101,7 +99,7 @@
             <span href="#"><img src="images/premium.png">Try premium</span>
           </div>
         </div>
-        <div class="sidebar-activity">
+        <div class="sidebar-activity" id="sidebarActivity">
           <h3>Recent</h3>
           <a href="#"><img src="images/recent.png"> Web Development</a>
           <a href="#"><img src="images/recent.png"> User Interface</a>
@@ -124,6 +122,7 @@
 
 
         </div>
+        <p id="ShowMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
       </div>
     <!-- ----------------------main-content --------- -->
       <div class="main-content">
@@ -358,6 +357,21 @@
   let profileMenu = document.getElementById("profileMenu");
   function toggleMenu(){
     profileMenu.classList.toggle("open-menu");
+  }
+</script>
+<script>
+  let sideActivity = document.getElementById("sidebarActivity")
+  let moreLink = document.getElementById("ShowMoreLink")
+  
+  function toggleActivity(){
+    sideActivity.classList.toggle("open-activity");
+
+    if(sideActivity.classList.contains("open-activity")){
+      moreLink.innerHTML= "Show less <b>-<b/>";
+    }
+    else{
+      moreLink.innerHTML="Show more <b>+<b/>";
+    }
   }
 </script>
 

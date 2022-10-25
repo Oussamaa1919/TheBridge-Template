@@ -96,6 +96,7 @@ a{
   align-items: center;
   padding: 0 15px;
   margin-right: 30%;
+  
 }
 .search-box img{
   width: 14px;
@@ -730,13 +731,19 @@ border-radius: 50%;
 .profile-footer .copyright-msg{
   justify-content: flex-start;
 }
+#ShowMoreLink{
+  display: none;
+}
+
 /*--------------------- media query for small screen---------------*/
 
 @media only screen and (max-width:600px){
+  
   .search-box{
     background: transparent;
     width: auto;
     padding: 0;
+    margin-right: 0;
   }
   .search-box input{
     width: 0;
@@ -749,8 +756,58 @@ border-radius: 50%;
     padding-right:0;
     margin:5px;
     }
-
+    .nav-profile-img{
+      width: 30px;
+    }
+    .container{
+      padding: 15px 3%;
+    }
+    .left-sidebar , .right-sidebar{
+      flex-basis: 100%;
+      position: relative;
+      top: unset;
+    }
+    .main-content{
+      flex-basis: 100%;
+    }
+    .post-stats div{
+      margin: 2px 0;
   
+    }
+    .post-activity-link span{
+      display: none;
+    }
+    .post-activity-link img{
+      margin-right: 0;
+    }
+    .profile-main, .profile-sidebar{
+      flex-basis: 100%;
+    }
+    .profile-container-inner{
+      font-size: 14px;
+    }
+    .profile-pic{
+      width: 30%;
+      margin-top:-50px ;
+    }
+    .profile-description{
+      font-size: 14px;
+    }
+  #ShowMoreLink{
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .sidebar-activity{
+    display: none;
+  }
+  .sidebar-activity.open-activity{
+    display: block;
+  }
+    
+ 
 }
 
 
